@@ -1,0 +1,34 @@
+
+### C++
+
+#include <iostream>
+
+using namespace std;
+
+class Node {
+public:
+    int data;
+    Node* right,* left;
+};
+
+Node* newnode(int data)
+{
+    Node* ele = new Node();
+    ele->data = data;
+    ele->left = NULL;
+    ele->right = NULL;
+    return ele;
+}
+
+int main()
+{
+    Node* root = newnode(5);
+    root->left = newnode(6);
+    cout<<root->left->data<<endl;
+    
+    return 0;
+}
+
+
+
+
